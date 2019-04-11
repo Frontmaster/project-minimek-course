@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import SampleComponent from './sample-component';
+import { Button } from 'antd'
 
 class App extends Component {
 	render() {
@@ -12,6 +13,7 @@ class App extends Component {
 					<h2>Project Mini-Mek</h2>
 				</header>
 				<SampleComponent />
+				<Button type="primary">Button</Button>
 			</div>
 		);
 	}

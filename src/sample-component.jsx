@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-const mapState = (state) => ({
+const mapState = state => ({
 	data: state.test.data
 });
 
