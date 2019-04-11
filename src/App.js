@@ -1,20 +1,32 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import SampleComponent from './sample-component';
-import { Button } from 'antd'
+import {Layout, Menu} from 'antd';
+
+const {
+	Header,
+	Content,
+	Footer
+} = Layout;
 
 class App extends Component {
 	render() {
 		return (
-			<div className="App">
-				<header className="App-header">
-					<img src={logo} className="App-logo" alt="logo"/>
-					<h2>Project Mini-Mek</h2>
-				</header>
-				<SampleComponent />
-				<Button type="primary">Button</Button>
-			</div>
+			<Layout className="layout">
+				<Header className="app-header">
+					<img src={logo} className="app-logo" alt="logo"/>
+					Project Mini-Mek
+				</Header>
+				<Content>
+					<Menu mode="horizontal" selectedKeys={['unitInfo']}>
+						<Menu.Item key="unitInfo">Unit Info</Menu.Item>
+						<Menu.Item key="pilots">Pilots</Menu.Item>
+						<Menu.Item key="mechs">Mechs</Menu.Item>
+						<Menu.Item key="unitOrganization">Unit Organization</Menu.Item>
+					</Menu>
+				</Content>
+				<Footer></Footer>
+			</Layout>
 		);
 	}
 }
