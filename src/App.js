@@ -2,7 +2,11 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Layout} from 'antd';
-import TabBarContainer from './features/tabs/TabBarContainer';
+import TabBarContainer from 'features/tabs/TabBarContainer';
+import Mechs from 'features/mechs/Mechs';
+import Pilots from 'features/pilots/Pilots';
+import UnitInfo from 'features/unitInfo/UnitInfo';
+import UnitOrganization from 'features/unitOrganization/UnitOrganization';
 
 const {
 	Header,
@@ -12,10 +16,10 @@ const {
 class App extends Component {
 	render() {
 		const tabs = [
-			{name: 'Unit Info', content: 'First'},
-			{name: 'Pilots', content: 'Second'},
-			{name: 'Mechs', content: 'Third'},
-			{name: 'Unit Organization', content: 'Fourth'}
+			{name: 'Unit Info', component: UnitInfo},
+			{name: 'Pilots', component: Pilots},
+			{name: 'Mechs', component: Mechs},
+			{name: 'Unit Organization', component: UnitOrganization}
 		];
 
 		return (
