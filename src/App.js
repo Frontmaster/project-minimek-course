@@ -1,16 +1,23 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Layout, Menu} from 'antd';
+import {Layout} from 'antd';
+import TabBarContainer from './features/tabs/TabBarContainer';
 
 const {
 	Header,
 	Content,
-	Footer
 } = Layout;
 
 class App extends Component {
 	render() {
+		const tabs = [
+			{name: 'Unit Info', content: 'First'},
+			{name: 'Pilots', content: 'Second'},
+			{name: 'Mechs', content: 'Third'},
+			{name: 'Unit Organization', content: 'Fourth'}
+		];
+
 		return (
 			<Layout className="layout">
 				<Header className="app-header">
@@ -18,14 +25,8 @@ class App extends Component {
 					Project Mini-Mek
 				</Header>
 				<Content>
-					<Menu mode="horizontal" selectedKeys={['unitInfo']}>
-						<Menu.Item key="unitInfo">Unit Info</Menu.Item>
-						<Menu.Item key="pilots">Pilots</Menu.Item>
-						<Menu.Item key="mechs">Mechs</Menu.Item>
-						<Menu.Item key="unitOrganization">Unit Organization</Menu.Item>
-					</Menu>
+					<TabBarContainer tabs={tabs} />
 				</Content>
-				<Footer></Footer>
 			</Layout>
 		);
 	}
