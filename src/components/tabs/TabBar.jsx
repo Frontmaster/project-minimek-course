@@ -8,7 +8,7 @@ const TabBar = props => {
 		const {name, component: TabComponent} = tabInfo;
 
 		return (
-			<Tabs.TabPane key={name} tab={name}>
+			<Tabs.TabPane key={name} tab={name} className="tab-item">
 				<TabComponent />
 			</Tabs.TabPane>
 		);

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {Layout} from 'antd';
-import TabBarContainer from 'features/tabs/TabBarContainer';
+import TabBarContainer from 'components/tabs/TabBarContainer';
 import Mechs from 'features/mechs/Mechs';
 import Pilots from 'features/pilots/Pilots';
 import UnitInfo from 'features/unitInfo/UnitInfo';

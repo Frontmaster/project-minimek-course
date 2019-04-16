@@ -9,7 +9,8 @@ module.exports = override(
 	addLessLoader({
 		javascriptEnabled: true,
 		modifyVars: {
-			'@layout-header-padding': '0 20px'
+			'@layout-header-padding': '0 20px',
+			'@form-item-margin-bottom': '10px'
 		}
 	})
 );
